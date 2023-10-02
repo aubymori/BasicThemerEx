@@ -1,0 +1,12 @@
+#include <windows.h>
+#include "BasicThemerEx.h"
+
+#define FROM_MAIN_HEADER
+
+IDI_BTEX  ICON  "BasicThemerEx.ico"
+
+/* UTF-8 */
+#pragma code_page(65001)
+
+/* English (United States) */
+#include "lang\en_US.rc"

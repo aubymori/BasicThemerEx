@@ -1,0 +1,31 @@
+#ifdef FROM_MAIN_HEADER
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+
+IDD_BTEX DIALOG 0, 0, 85, 58
+STYLE DS_SETFONT | DS_CENTER | WS_CAPTION | WS_SYSMENU
+CAPTION "BasicThemerEx"
+FONT 9, "Segoe UI"
+{
+	PUSHBUTTON "&Edit blacklist...", IDD_BTEX_EDIT, 5, 5, 75, 14
+		PUSHBUTTON "&About...", IDD_BTEX_ABOUT, 5, 24, 75, 14
+		CHECKBOX   "E&nable basic theme", IDD_BTEX_ENABLE, 5, 43, 75, 10, BS_CHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP
+}
+
+IDD_ABOUT DIALOG 0, 0, 150, 75
+STYLE DS_SETFONT | DS_CENTER | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About BasicThemerEx"
+FONT 8, "MS Shell Dlg 2"
+{
+	CONTROL IDI_BTEX, IDD_ABOUT_ICON, STATIC, SS_ICON | SS_REALSIZECONTROL | WS_CHILD | WS_VISIBLE, 10, 10, 21, 20
+	CONTROL "BasicThemerEx", 1010, STATIC, WS_CHILD | WS_VISIBLE, 41, 10, 100, 8
+	CONTROL "v1.0.0", 1011, STATIC, WS_CHILD | WS_VISIBLE, 41, 18, 100, 8
+	CONTROL "BasicThemerEx is licensed under the Unlicense.", 1012, STATIC, WS_CHILD | WS_VISIBLE, 10, 35, 130, 16
+	PUSHBUTTON "OK", IDD_ABOUT_OK, 50, 55, 50, 14
+}
+
+STRINGTABLE
+{
+	IDS_NONADMIN     L"BasicThemerEx is not running as an administrator; programs which are running as an administrator will not have basic frames.\n\nRestart BasicThemerEx as an administrator if you want all windows to have basic frames."
+	IDS_ONEINSTANCE  L"BasicThemerEx is already running."
+}
+#endif
